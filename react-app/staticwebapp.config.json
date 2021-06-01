@@ -1,4 +1,19 @@
 {
+  "routes": [
+    {
+      "route": "/.auth/login/twitter",
+      "statusCode": "404"
+    },
+    {
+      "route": "/api/products/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/profile",
+      "methods": ["PUT", "POST", "DELETE"],
+      "allowedRoles": ["authenticated"]
+    }
+  ],
   "navigationFallback": {
     "rewrite": "/index.html",
     "exclude": ["*.{css,scss,js,png,gif,ico,jpg,svg}"]
